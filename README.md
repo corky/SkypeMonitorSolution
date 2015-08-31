@@ -101,7 +101,7 @@ Host: IP-ADDRESS-OF-LOCAL-DESKTOP:8081
 
 #####Azure Deployment Test
 POST /SkypeStatus.svc/currentstatus
-Host: <IP OF AZURE SERVER>:8080
+Host: IP-OF-AZURE-SERVER:8080
 {
     "Status": "test"
 }
