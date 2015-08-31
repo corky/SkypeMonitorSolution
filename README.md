@@ -95,4 +95,16 @@ This project runs on the Raspberry Pi with a windows 10 IOT Core image on it.   
 * If you launch SkypeMonitor.exe and nothing happens, make sure to check Skype to see if there is a permission dialog allowing the SkypeMonitor to communicate with Skype.  Click Allow.
 * Use a tool like Fiddler or Postman to test the endpoints of each application (desktop computer running SkypeMonitor on port 8081 and Azure deployment on port 8080)
 
+#####SkypeMonitor Test
+GET /currentstatus
+Host: <IP ADDRESS OF LOCAL DESKTOP>:8081
 
+#####Azure Deployment Test
+POST /SkypeStatus.svc/currentstatus
+Host: <IP OF AZURE SERVER>:8080
+{
+    "Status": "test"
+}
+
+GET /SkypeStatus.svc/currentstatus
+Host: <IP OF AZURE SERVER>:8080
