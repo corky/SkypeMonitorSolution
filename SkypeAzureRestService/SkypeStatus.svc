@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="SkypeAzureRestService.SkypeStatus" CodeBehind="SkypeStatus.svc.cs" %>
