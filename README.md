@@ -49,8 +49,8 @@ This project runs on the Raspberry Pi with a windows 10 IOT Core image on it.   
   * Right click your Raspberry PI and choose "Web Browser Here"
   * Click Apps
   * Under Installed Apps find "RaspPiSkypeClient2_1.0.0.0_arm_<blah>" highlight it and click "start"
-4) LED lights should now light up based on your skype status
-5) Install PI and LEDs in a location (In wall near office door) to be viewed
+4. LED lights should now light up based on your skype status
+5. Install PI and LEDs in a location (In wall near office door) to be viewed
 
 ####Option B (Azure Deployment)
 #####Bill of Materials
@@ -86,8 +86,8 @@ This project runs on the Raspberry Pi with a windows 10 IOT Core image on it.   
   * Right click your Raspberry PI and choose "Web Browser Here"
   * Click Apps
   * Under Installed Apps find "RaspPiSkypeClient2_1.0.0.0_arm_<blah>" highlight it and click "start"
-5) LED lights should now light up based on your skype status
-6) Install PI and LEDs in a location (In wall near office door) to be viewed
+5. LED lights should now light up based on your skype status
+6. Install PI and LEDs in a location (In wall near office door) to be viewed
 
 ###Troubleshooting
 * Make sure to run the SkypeMonitor.exe as "administrator" to allow access to create the http server and bind to port 8081.
