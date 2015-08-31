@@ -24,8 +24,8 @@ namespace SkypeMonitor
         //Configuration values
         //Port to run local network Rest service on
         String localServerPort = "8081";
-        //Location of SkypeAzureRestService deployed on Azure (if using Azure option)
-        String AzureURL = "http://192.168.200.40:8080/SkypeStatus.svc/currentstatus";
+        //Location of SkypeAzureRestService deployed on Azure (if using option B deployment)
+        String AzureURL = "http://<IP ADDRESS OF AZURE SERVER>:8080/SkypeStatus.svc/currentstatus";
 
         //Global Variables
         HttpListener listener;
