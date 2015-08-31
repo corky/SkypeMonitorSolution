@@ -15,11 +15,11 @@ namespace RaspPiSkypeClient2
         //REST Service Configuration
         //This is the string to be used to hit the local network deployed (ie form app) REST service.
         //Uncomment out this line and replace IP address of your windows 10 box running skype monitor
-        private String statusService = "http://192.168.200.40:8081/currentstatus";
+        private String statusService = "http://<IP ADDRESS OF DESKTOP RUNNING SKYPE/SKYPEMONITOR>:8081/currentstatus";
         //this is the string to be used to hit the Azure deployed REST service.
         //Uncomment out this line and replace IP address of your Azure server to which you deployed
         //  the SkypeAzureRestService.
-        //private String statusService = "http://192.168.200.40:8080/SkypeStatus.svc/currentstatus";
+        //private String statusService = "http://<IP ADDRESS OF AZURE SERVER>:8080/SkypeStatus.svc/currentstatus";
 
         //PI LED Pin Configuration
         private const int GREEN_LED_PIN = 27;
