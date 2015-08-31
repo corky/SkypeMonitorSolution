@@ -22,7 +22,7 @@ This project runs on the Raspberry Pi with a windows 10 IOT Core image on it.   
 
 ###How to Deploy
 ####Option A (Local Network)
-#####Hardware Needed: local windows desktop running skype, Raspberry Pi 2, Spark Fun Tri Color LED breakout board
+#####Hardware Needed: local windows desktop running skype, Raspberry Pi 2, SparkFun Tri-Color LED Breakout Kit
 [Connections from breakout board to Pi](https://raw.github.com/corky/SkypeMonitorSolution/master/PiWithLEDs.png)
 1. Compile/Run the SkypeMonitor project on a desktop running Windows and Skype.
   * Using Visual Studio Community Edition, load the SkypeMonitor.sln file
@@ -46,7 +46,7 @@ This project runs on the Raspberry Pi with a windows 10 IOT Core image on it.   
 5) Install PI and LEDs in a location (In wall near office door) to be viewed
 
 ####Option B (Cloud Deployment)
-#####Hardware Needed: local windows desktop running skype, Raspberry Pi 2, Azure deployed IIS server, Spark Fun Tri Color LED breakout board
+#####Hardware Needed: local windows desktop running skype, Raspberry Pi 2, Azure deployed IIS server, SparkFun Tri-Color LED Breakout Kit
 [Connections from breakout board to Pi](https://raw.github.com/corky/SkypeMonitorSolution/master/PiWithLEDs.png)
 1. Build/Deploy SkypeAzureRestService to a Azure deployed server
   * Documentation for this step can be found [here](https://azure.microsoft.com/en-us/documentation/articles/web-sites-deploy/)
