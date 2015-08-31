@@ -31,7 +31,7 @@ This project runs on the Raspberry Pi with a windows 10 IOT Core image on it.   
 2) Configure/Compile/Deploy the RaspPiSkypeClient application 
   * Update the MainPage.xaml.cs with the IP address of your computer running the SkypeMonitor.exe from step 1.
   * In the Solution Explorer, right click the Solution "SkypeMonitor" and choose build solution.
-  * Follow the directions (http://ms-iot.github.io/content/en-US/GetStarted.htm "here") for deploying to your Raspberry Pi.
+  * Follow the directions [here](http://ms-iot.github.io/content/en-US/GetStarted.htm) for deploying to your Raspberry Pi.
      * Highlights:  (From the Project Properties, Debug window)
      * Choose Debug Configuration, ARM Platform, Target Device: Raspberry PI running Windows 10, Uncheck "Use Authentication"
      * Right Click project and choose "Deploy"
@@ -52,7 +52,7 @@ This project runs on the Raspberry Pi with a windows 10 IOT Core image on it.   
 2) Configure/Compile/Deploy the RaspPiSkypeClient application 
   * Update the MainPage.xaml.cs with the IP address of your computer running the SkypeMonitor.exe from step 1.
   * In the Solution Explorer, right click the Solution "SkypeMonitor" and choose build solution.
-  * Follow the directions (http://ms-iot.github.io/content/en-US/GetStarted.htm "here") for deploying to your Raspberry Pi.
+  * Follow the directions [here](http://ms-iot.github.io/content/en-US/GetStarted.htm) for deploying to your Raspberry Pi.
      * Highlights:  (From the Project Properties, Debug window)
      * Choose Debug Configuration, ARM Platform, Target Device: Raspberry PI running Windows 10, Uncheck "Use Authentication"
      * Right Click project and choose "Deploy"
