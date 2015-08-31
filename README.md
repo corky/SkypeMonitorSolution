@@ -93,3 +93,6 @@ This project runs on the Raspberry Pi with a windows 10 IOT Core image on it.   
 * Make sure to run the SkypeMonitor.exe as "administrator" to allow access to create the http server and bind to port 8081.
 * If you are running windows firewall, you will need to create a new "inbound rule" on port 8081 and allow all traffic.
 * If you launch SkypeMonitor.exe and nothing happens, make sure to check Skype to see if there is a permission dialog allowing the SkypeMonitor to communicate with Skype.  Click Allow.
+* Use a tool like Fiddler or Postman to test the endpoints of each application (desktop computer running SkypeMonitor on port 8081 and Azure deployment on port 8080)
+
+
