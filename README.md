@@ -35,6 +35,8 @@ This project runs on the Raspberry Pi with a windows 10 IOT Core image on it.   
   * If you have problems locating the reference Skype4Com it is typically located in C:\Program Files\Common Files\Skype
   * Once successful on building, execute the SkypeMonitor.exe you just built.
   * The first time you run the SkypeMonitor.exe successfully it wont start until you confirm a security message in skype allowing the SkypeMonitor.exe to communicate with Skype.  Click 'Allow'.
+  * Make sure to run the SkypeMonitor.exe as "administrator" to allow access to create the http server and bind to port 8081.
+  * If you are running windows firewall, you will need to create a new "inbound rule" on port 8081 and allow all traffic.
 2. Configure/Compile/Deploy the RaspPiSkypeClient application 
   * Update the MainPage.xaml.cs with the IP address of your computer running the SkypeMonitor.exe from step 1.
   * In the Solution Explorer, right click the Solution "SkypeMonitor" and choose build solution.
@@ -86,3 +88,8 @@ This project runs on the Raspberry Pi with a windows 10 IOT Core image on it.   
   * Under Installed Apps find "RaspPiSkypeClient2_1.0.0.0_arm_<blah>" highlight it and click "start"
 5) LED lights should now light up based on your skype status
 6) Install PI and LEDs in a location (In wall near office door) to be viewed
+
+###Troubleshooting
+* Make sure to run the SkypeMonitor.exe as "administrator" to allow access to create the http server and bind to port 8081.
+* If you are running windows firewall, you will need to create a new "inbound rule" on port 8081 and allow all traffic.
+* If you launch SkypeMonitor.exe and nothing happens, make sure to check Skype to see if there is a permission dialog allowing the SkypeMonitor to communicate with Skype.  Click Allow.
