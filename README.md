@@ -18,7 +18,7 @@ This project runs on your windows 10 desktop which has Skype running.  It retrie
 This project runs on the Raspberry Pi with a windows 10 IOT Core image on it.   It will periodically poll a rest service (locally hosted on the SkypeMonitor app, or the Azure deployment of the third project), and update its set of LED lights depending on the value of your skype status (Online - Green, Do Not Disturb - Red, Away - Yellow)
 
 ####SkypeAzureRestService
-(Optional) This project is meant to run in IIS on an Azure deployed server.   It allows you to offload the rest server piece of this application to the cloud to a) improve performance and b) eliminate the possiblity of IP address changing on the client devices (Desktop computer, Raspberry PI) requiring a code change and deployment
+(Optional) This project is meant to run in IIS on an Azure deployed server.   It allows you to offload the rest server piece of this application to the cloud to a) improve performance and b) eliminate the possiblity of IP address changing on the client devices (Desktop computer, Raspberry PI) requiring a code change and re-deployment
 
 ###How to Deploy
 ####Option A (Local Network)
@@ -97,7 +97,7 @@ This project runs on the Raspberry Pi with a windows 10 IOT Core image on it.   
 
 #####SkypeMonitor Test
 GET /currentstatus
-Host: <IP ADDRESS OF LOCAL DESKTOP>:8081
+Host: IP-ADDRESS-OF-LOCAL-DESKTOP:8081
 
 #####Azure Deployment Test
 POST /SkypeStatus.svc/currentstatus
@@ -107,4 +107,4 @@ Host: <IP OF AZURE SERVER>:8080
 }
 
 GET /SkypeStatus.svc/currentstatus
-Host: <IP OF AZURE SERVER>:8080
+Host: IP-OF-AZURE-SERVER:8080
