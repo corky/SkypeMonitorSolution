@@ -50,7 +50,7 @@ This project runs on the Raspberry Pi with a windows 10 IOT Core image on it.   
 4) LED lights should now light up based on your skype status
 5) Install PI and LEDs in a location (In wall near office door) to be viewed
 
-####Option B (Cloud Deployment)
+####Option B (Azure Deployment)
 #####Bill of Materials
 * Local windows desktop running skype
 * Raspberry Pi 2
