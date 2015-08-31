@@ -18,7 +18,7 @@ namespace RaspPiSkypeClient2
         private String statusService = "http://<IP ADDRESS OF DESKTOP RUNNING SKYPE/SKYPEMONITOR>:8081/currentstatus";
         //this is the string to be used to hit the Azure deployed REST service.
         //Uncomment out this line and replace IP address of your Azure server to which you deployed
-        //  the SkypeAzureRestService.
+        //  the SkypeAzureRestService only if using Option B deployment
         //private String statusService = "http://<IP ADDRESS OF AZURE SERVER>:8080/SkypeStatus.svc/currentstatus";
 
         //PI LED Pin Configuration
