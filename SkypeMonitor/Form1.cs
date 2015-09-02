@@ -21,7 +21,7 @@ namespace SkypeMonitor
 {
     public partial class Form1 : Form
     {
-        //Configuration values
+        //Configuration Section
         //Port to run local network Rest service on
         String localServerPort = "8081";
         //Location of SkypeAzureRestService deployed on Azure (if using option B deployment)
