@@ -30,15 +30,15 @@ This project runs on the Raspberry Pi with a windows 10 IOT Core image on it.   
 [Connections from breakout board to Pi](https://raw.github.com/corky/SkypeMonitorSolution/master/PiWithLEDs2.png)
 
 1. Compile/Run the SkypeMonitor project on a desktop running Windows and Skype.
-  * Using Visual Studio Community Edition, load the SkypeMonitor.sln file
+  * Using Visual Studio, load the SkypeMonitor.sln file
   * In the Solution Explorer, right click the Solution "SkypeMonitor" and choose build solution
   * If you have problems locating the reference Skype4Com it is typically located in C:\Program Files\Common Files\Skype
   * Once successful on building, execute the SkypeMonitor.exe you just built.
-  * The first time you run the SkypeMonitor.exe successfully it wont start until you confirm a security message in skype allowing the SkypeMonitor.exe to communicate with Skype.  Click 'Allow'.
+  * The first time you run the SkypeMonitor.exe successfully it wont start until you confirm a security message in Skype allowing the SkypeMonitor.exe to communicate with Skype.  Click 'Allow'.
   * Make sure to run the SkypeMonitor.exe as "administrator" to allow access to create the http server and bind to port 8081.
   * If you are running windows firewall, you will need to create a new "inbound rule" on port 8081 and allow all traffic.
 2. Configure/Compile/Deploy the RaspPiSkypeClient application 
-  * Update the MainPage.xaml.cs with the IP address of your computer running the SkypeMonitor.exe from step 1.
+  * Update the MainPage.xaml.cs with the IP address of your computer running the SkypeMonitor.exe from step 1.  This can easily be found by reading the comments in the configuration section.
   * In the Solution Explorer, right click the Solution "SkypeMonitor" and choose build solution.
   * Follow the directions [here](http://ms-iot.github.io/content/en-US/GetStarted.htm) for deploying to your Raspberry Pi.
      * Highlights:  (From the Project Properties, Debug window)
@@ -46,10 +46,10 @@ This project runs on the Raspberry Pi with a windows 10 IOT Core image on it.   
      * Right Click project and choose "Deploy"
 3. Run the Raspberry Pi client
   * Start the Windows 10 IOT Core Watcher
-  * Right click your Raspberry PI and choose "Web Browser Here"
+  * In the Windows 10 IOT Core Watch find your Raspberry PI, right click, and choose "Web Browser Here"
   * Click Apps
   * Under Installed Apps find "RaspPiSkypeClient2_1.0.0.0_arm_<blah>" highlight it and click "start"
-4. LED lights should now light up based on your skype status
+4. If your SkypeMonitor.exe and RaspPiSkypeCLient are both running, LED lights should now light up based on your skype status
 5. Install PI and LEDs in a location (In wall near office door) to be viewed
 
 ####Option B (Azure Deployment)
@@ -66,16 +66,17 @@ This project runs on the Raspberry Pi with a windows 10 IOT Core image on it.   
   * Make note of the IP/Port address of your Azure server deployment to use in step 2 and 3
   * Test with rest client application like Fiddler or Postman.
 2. Compile/Run the SkypeMonitor project on a desktop running Windows and Skype.
-  * Using Visual Studio Community Edition, load the SkypeMonitor.sln file
-  * Find the SkypeMonitor/Form1.cs and update the configuration values with the IP address and port of your Azure server deployment from step 1
+  * Using Visual Studio, load the SkypeMonitor.sln file
+  * Find the SkypeMonitor/Form1.cs and update the configuration values with the IP address and port of your Azure server deployment from step 1.  This can easily be found by reading the comments in the configuration section.
   * In the Solution Explorer, right click the Solution "SkypeMonitor" and choose build solution
   * If you have problems locating the reference Skype4Com it is typically located in C:\Program Files\Common Files\Skype
-  * Once successful on building, execute the SkypeMonitor.exe you just built.
+  * Once successful on building, execute the SkypeMonitor.exe you just built.  
   * The first time you run the SkypeMonitor.exe successfully it wont start until you confirm a security message in skype allowing the SkypeMonitor.exe to communicate with Skype.  Click 'Allow'.
   * The application will launch minimized in the system tray.   Click on the application in the system tray to reshow it and checkbox the "Post status to Azure service".
   * Minimize application back to the system tray.
+  * You can test your application thus far (SkypeMonitor.exe sending the current status to the Azure service) by launching Fiddler or Postman and hit your Azure REST endpoint to retrieve the current status.  (see troubleshooting below for routes)
 3. Configure/Compile/Deploy the RaspPiSkypeClient application 
-  * Uncomment out the Option B line in the MainPage.xaml.cs (under configuration) with the IP address and port of your Azure server running SkypeAzureRestService from step 1.
+  * Uncomment out the Option B line in the MainPage.xaml.cs (under configuration) with the IP address and port of your Azure server running SkypeAzureRestService from step 1.  
   * In the Solution Explorer, right click the Solution "SkypeMonitor" and choose build solution.
   * Follow the directions [here](http://ms-iot.github.io/content/en-US/GetStarted.htm) for deploying to your Raspberry Pi.
      * Highlights:  (From the Project Properties, Debug window)
@@ -83,7 +84,7 @@ This project runs on the Raspberry Pi with a windows 10 IOT Core image on it.   
      * Right Click project and choose "Deploy"
 4. Run the Raspberry Pi client
   * Start the Windows 10 IOT Core Watcher
-  * Right click your Raspberry PI and choose "Web Browser Here"
+  * In the Windows 10 IOT Core Watch find your Raspberry PI, right click your Raspberry PI and choose "Web Browser Here"
   * Click Apps
   * Under Installed Apps find "RaspPiSkypeClient2_1.0.0.0_arm_<blah>" highlight it and click "start"
 5. LED lights should now light up based on your skype status
@@ -92,8 +93,9 @@ This project runs on the Raspberry Pi with a windows 10 IOT Core image on it.   
 ###Troubleshooting
 * Make sure to run the SkypeMonitor.exe as "administrator" to allow access to create the http server and bind to port 8081.
 * If you are running windows firewall, you will need to create a new "inbound rule" on port 8081 and allow all traffic.
-* If you launch SkypeMonitor.exe and nothing happens, make sure to check Skype to see if there is a permission dialog allowing the SkypeMonitor to communicate with Skype.  Click Allow.
-* Use a tool like Fiddler or Postman to test the endpoints of each application (desktop computer running SkypeMonitor on port 8081 and Azure deployment on port 8080)
+* If your SkypeMonitor.exe, Azure service, and RaspPiSkypeCLient are all running, LED lights should now light up based on your skype status
+  * When you launch SkypeMonitor.exe and nothing happens, make sure to check Skype to see if there is a permission dialog allowing the SkypeMonitor to communicate with Skype.  Click Allow.
+  * Use a tool like Fiddler or Postman to test the endpoints of each application (desktop computer running SkypeMonitor on port 8081 and Azure deployment on port 8080)
 
 #####SkypeMonitor Test
 GET /currentstatus
