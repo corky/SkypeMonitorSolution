@@ -12,6 +12,7 @@ namespace RaspPiSkypeClient2
 {
     public sealed partial class MainPage : Page
     {
+        //Configuration Section
         //REST Service Configuration
         //Below this is the string to be used to hit the local network deployed (ie form app) REST service.
         //Option A Deployment
