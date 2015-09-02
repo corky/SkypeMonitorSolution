@@ -13,11 +13,13 @@ namespace RaspPiSkypeClient2
     public sealed partial class MainPage : Page
     {
         //REST Service Configuration
-        //This is the string to be used to hit the local network deployed (ie form app) REST service.
-        //Uncomment out this line and replace IP address of your windows 10 box running skype monitor
+        //Below this is the string to be used to hit the local network deployed (ie form app) REST service.
+        //Option A Deployment
+        //Uncomment out this line and replace IP address of your windows 10 box running skype monitor 
         private String statusService = "http://<IP ADDRESS OF DESKTOP RUNNING SKYPE/SKYPEMONITOR>:8081/currentstatus";
-        //this is the string to be used to hit the Azure deployed REST service.
-        //Uncomment out this line and replace IP address of your Azure server to which you deployed
+        //Below this is the string to be used to hit the Azure deployed REST service.
+        //Uncomment out this line (and make sure the above line is commented out)
+        //  and replace IP address of your Azure server to which you deployed
         //  the SkypeAzureRestService only if using Option B deployment
         //private String statusService = "http://<IP ADDRESS OF AZURE SERVER>:8080/SkypeStatus.svc/currentstatus";
 
